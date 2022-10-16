@@ -11,9 +11,9 @@ use BenSampo\Enum\Enum;
  */
 final class OrientationType extends Enum
 {
-    const OptionOne = 0;
+    public const OptionOne = 0;
 
-    const OptionTwo = 1;
+    public const OptionTwo = 1;
 
-    const OptionThree = 2;
+    public const OptionThree = 2;
 }

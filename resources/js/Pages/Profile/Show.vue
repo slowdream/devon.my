@@ -13,10 +13,10 @@
                     <span class="breadcrumb-last">{{ card.name }}</span>
                 </div>
                 <nav class="profile-nav-link">
-                    <a href="#" class="previus">
+                    <a class="previus" href="#">
                         <i class="icon ion-ios-arrow-thin-left"></i>
                     </a>
-                    <a href="#" class="next">
+                    <a class="next" href="#">
                         <i class="icon ion-ios-arrow-thin-right"></i>
                     </a>
                 </nav>
@@ -31,8 +31,9 @@
                         <img
                             v-for="photo in card.photos"
                             :src="photo"
+                            alt=""
                             class="main-photo"
-                        >
+                        />
                     </div>
                     <div class="col-lg-6 thumbnail-photo">
                         <div class="row-sm justify-content-center">
@@ -104,7 +105,7 @@
                                             <a href="#"><i class="fa fa-instagram"></i></a>
                                             <a href="#"><i class="fa fa-twitter"></i></a>
                                         </p>-->
-                    <a href="#" class="btn-classic">Send Privat message</a>
+                    <a class="btn-classic" href="#">Send Privat message</a>
                 </aside>
             </div>
         </div>
@@ -112,18 +113,10 @@
     </AppLayout>
 </template>
 
-<script>
-import AppLayout from '../../Layouts/AppLayout'
+<script setup>
+import AppLayout from '@/Layouts/AppLayout.vue'
 import { Link } from '@inertiajs/inertia-vue3'
 
-export default {
-    name: 'Show',
-    components: { AppLayout, Link },
-    props: {
-        card: Object,
-    },
-    mounted () {
-        console.log(this.card)
-    }
-}
+const { card } = defineProps(['card'])
+console.log(card)
 </script>

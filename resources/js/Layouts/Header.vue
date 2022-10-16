@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import {Link} from '@inertiajs/inertia-vue3';
+</script>
+
 <template>
     <header class="header transparent">
         <div class="container">
@@ -89,19 +93,6 @@
         </div>
     </header>
 </template>
-
-<script>
-import { defineComponent } from 'vue'
-import { Link } from '@inertiajs/inertia-vue3'
-
-export default defineComponent({
-    name: 'Header',
-    components: {
-        Link,
-    },
-})
-
-</script>
 
 <style scoped>
 

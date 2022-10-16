@@ -1,3 +1,7 @@
+<script setup>
+import Header from './Header.vue'
+import Footer from './Footer.vue'</script>
+
 <template>
     <Header/>
 
@@ -7,20 +11,6 @@
 
     <Footer/>
 </template>
-
-<script>
-import Header from './Header'
-import Footer from './Footer'
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    name: 'AppLayout',
-    components: {
-        Footer,
-        Header,
-    },
-})
-</script>
 
 <style scoped>
 

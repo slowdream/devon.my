@@ -6,7 +6,7 @@ use App\Models\Card;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class CardController extends Controller
+class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Catalog', ['items' => Card::query()->paginate()]);
+        return Inertia::render('Home');
     }
 
     /**
@@ -45,11 +45,11 @@ class CardController extends Controller
      *
      * @param  \App\Models\Card  $card
      *
-     * @return \Inertia\Response
+     * @return \Illuminate\Http\Response
      */
     public function show(Card $card)
     {
-        return Inertia::render('Profile/Show', ['card' => $card->toArray()]);
+        //
     }
 
     /**

@@ -1,14 +1,17 @@
+<script setup>
+import AppLayout from '../Layouts/AppLayout.vue'</script>
+
 <template>
     <AppLayout>
         <!-- Hero -->
         <section class="hero over-header"
-                 style="background-image: url('assets/img/placeholder/placeholder_1920x1200.jpg')">
+                 style="background-image: url('resources/assets/img/placeholder/placeholder_1920x1200.jpg')">
             <div class="container">
                 <div class="over-header-inner">
                     <h1 class="title">Find Perfect Model</h1>
                     <form class="searh-model">
 						<span class="select-item">
-							<select name="height" id="height" class="selectpicker">
+							<select id="height" class="selectpicker" name="height">
 								<option value="0">Height</option>
 								<option value="150">150</option>
 								<option value="155">155</option>
@@ -16,7 +19,7 @@
 							</select>
 						</span>
                         <span class="select-item">
-							<select name="waist" id="waist" class="selectpicker">
+							<select id="waist" class="selectpicker" name="waist">
 								<option value="0">Waist</option>
 								<option value="50">50</option>
 								<option value="55">55</option>
@@ -24,7 +27,7 @@
 							</select>
 						</span>
                         <span class="select-item">
-							<select name="bust" id="bust" class="selectpicker">
+							<select id="bust" class="selectpicker" name="bust">
 								<option value="0">Bust</option>
 								<option value="45">45</option>
 								<option value="50">50</option>
@@ -32,7 +35,7 @@
 							</select>
 						</span>
                         <span class="select-item">
-							<select name="age" id="age" class="selectpicker">
+							<select id="age" class="selectpicker" name="age">
 								<option value="0">Age</option>
 								<option value="18">18</option>
 								<option value="19">19</option>
@@ -40,7 +43,7 @@
 							</select>
 						</span>
                         <span class="select-item">
-							<select name="hair" id="hair" class="selectpicker">
+							<select id="hair" class="selectpicker" name="hair">
 								<option value="hair">Hair</option>
 								<option value="blonde">Blonde</option>
 								<option value="black">Black</option>
@@ -48,14 +51,14 @@
 							</select>
 						</span>
                         <span class="select-item">
-							<select name="age" id="eyes" class="selectpicker">
+							<select id="eyes" class="selectpicker" name="age">
 								<option value="0">Eyes</option>
 								<option value="blue">Blue</option>
 								<option value="green">Green</option>
 								<option value="brown">Brown</option>
 							</select>
 						</span>
-                        <input type="submit" value="Search" class="submit">
+                        <input class="submit" type="submit" value="Search">
                     </form>
                 </div>
             </div>
@@ -66,7 +69,7 @@
             <h2 class="section-title lines">Categories</h2>
             <div class="row categories-wr">
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Woman</p>
@@ -75,7 +78,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Trending</p>
@@ -84,7 +87,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">With Video</p>
@@ -93,7 +96,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Blue Eyes</p>
@@ -102,7 +105,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Blonde</p>
@@ -111,7 +114,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
-                    <a href="07_Models_Load_More_Alternative.html" class="category-models-item"
+                    <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
                        style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">European</p>
@@ -136,7 +139,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 author-img-wr">
-                    <img src="assets/img/placeholder/placeholder_900x500.jpg" alt="" class="author-img">
+                    <img alt="" class="author-img" src="assets/img/placeholder/placeholder_900x500.jpg">
                 </div>
             </div>
         </div>
@@ -147,8 +150,8 @@
             <article class="model-row">
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
-                        <a href="05_Model_Profile.html" class="img-wr">
-                            <img src="assets/img/placeholder/placeholder_400x350.jpg" alt="">
+                        <a class="img-wr" href="05_Model_Profile.html">
+                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
                         </a>
                     </div>
                     <div class="col-xl-6">
@@ -183,24 +186,24 @@
                                 </p>
                             </div>
                             <p class="rating">
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr">
-                            <a href="#" class="soc-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                         </p>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr big">
-                            <a href="#" class="soc-icon"><i class="icon ion-android-favorite"></i></a>
-                            <a href="#" class="soc-icon"><i class="icon ion-ios-email-outline"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-android-favorite"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-ios-email-outline"></i></a>
                         </p>
                     </div>
                 </div>
@@ -208,8 +211,8 @@
             <article class="model-row">
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
-                        <a href="05_Model_Profile.html" class="img-wr">
-                            <img src="assets/img/placeholder/placeholder_400x350.jpg" alt="">
+                        <a class="img-wr" href="05_Model_Profile.html">
+                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
                         </a>
                     </div>
                     <div class="col-xl-6">
@@ -244,25 +247,25 @@
                                 </p>
                             </div>
                             <p class="rating">
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr">
-                            <a href="#" class="soc-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" class="soc-icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a>
                         </p>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr big">
-                            <a href="#" class="soc-icon"><i class="icon ion-android-favorite"></i></a>
-                            <a href="#" class="soc-icon"><i class="icon ion-ios-email-outline"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-android-favorite"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-ios-email-outline"></i></a>
                         </p>
                     </div>
                 </div>
@@ -270,8 +273,8 @@
             <article class="model-row">
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
-                        <a href="05_Model_Profile.html" class="img-wr">
-                            <img src="assets/img/placeholder/placeholder_400x350.jpg" alt="">
+                        <a class="img-wr" href="05_Model_Profile.html">
+                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
                         </a>
                     </div>
                     <div class="col-xl-6">
@@ -306,23 +309,23 @@
                                 </p>
                             </div>
                             <p class="rating">
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
-                                <i class="fa fa-star active" aria-hidden="true"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
+                                <i aria-hidden="true" class="fa fa-star active"></i>
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr">
-                            <a href="#" class="soc-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                         </p>
                     </div>
                     <div class="col-xl-2">
                         <p class="soc-icons-wr big">
-                            <a href="#" class="soc-icon"><i class="icon ion-android-favorite"></i></a>
-                            <a href="#" class="soc-icon"><i class="icon ion-ios-email-outline"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-android-favorite"></i></a>
+                            <a class="soc-icon" href="#"><i class="icon ion-ios-email-outline"></i></a>
                         </p>
                     </div>
                 </div>
@@ -334,7 +337,7 @@
             <h2 class="section-title lines">Journal</h2>
             <div class="row justify-content-center">
                 <article class="col-md-6 col-lg-4 last-post-wr">
-                    <a href="13_Blog_Open_Widget.html" class="post-item no-decoration">
+                    <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
                                 style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
@@ -353,7 +356,7 @@
                     </a>
                 </article>
                 <article class="col-md-6 col-lg-4 last-post-wr">
-                    <a href="13_Blog_Open_Widget.html" class="post-item no-decoration">
+                    <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
                                 style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
@@ -372,7 +375,7 @@
                     </a>
                 </article>
                 <article class="col-md-6 col-lg-4 last-post-wr">
-                    <a href="13_Blog_Open_Widget.html" class="post-item no-decoration">
+                    <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
                                 style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
@@ -395,12 +398,3 @@
         <!-- End Last Post List -->
     </AppLayout>
 </template>
-
-<script>
-import AppLayout from '../Layouts/AppLayout'
-
-export default {
-    name: 'Home',
-    components: { AppLayout }
-}
-</script>
