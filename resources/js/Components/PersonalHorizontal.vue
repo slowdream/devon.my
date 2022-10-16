@@ -2,7 +2,7 @@
     <article class="model-row">
         <div class="row">
             <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-2 offset-xl-0">
-                <a href="05_Model_Profile.html" class="img-wr">
+                <a class="img-wr" href="05_Model_Profile.html">
                     <img :src="card.photo" alt="">
                 </a>
             </div>
@@ -44,24 +44,24 @@
                         </p>
                     </div>
                     <p class="rating">
-                        <i class="fa fa-star active" aria-hidden="true"></i>
-                        <i class="fa fa-star active" aria-hidden="true"></i>
-                        <i class="fa fa-star active" aria-hidden="true"></i>
-                        <i class="fa fa-star active" aria-hidden="true"></i>
-                        <i class="fa fa-star active" aria-hidden="true"></i>
+                        <i aria-hidden="true" class="fa fa-star active"></i>
+                        <i aria-hidden="true" class="fa fa-star active"></i>
+                        <i aria-hidden="true" class="fa fa-star active"></i>
+                        <i aria-hidden="true" class="fa fa-star active"></i>
+                        <i aria-hidden="true" class="fa fa-star active"></i>
                     </p>
                 </div>
             </div>
             <div class="col-xl-2">
                 <p class="soc-icons-wr">
-                    <a href="#" class="soc-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" class="soc-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-instagram"></i></a>
+                    <a class="soc-icon" href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                 </p>
             </div>
             <div class="col-xl-2">
                 <p class="soc-icons-wr big">
-                    <a href="#" class="soc-icon"><i class="icon ion-android-favorite"></i></a>
-                    <a href="#" class="soc-icon"><i class="icon ion-ios-email-outline"></i></a>
+                    <a class="soc-icon" href="#"><i class="icon ion-android-favorite"></i></a>
+                    <a class="soc-icon" href="#"><i class="icon ion-ios-email-outline"></i></a>
                 </p>
             </div>
         </div>

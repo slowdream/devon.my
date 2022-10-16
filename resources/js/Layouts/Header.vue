@@ -1,12 +1,11 @@
-<script setup lang="ts">
-import {Link} from '@inertiajs/inertia-vue3';
-</script>
+<script setup>
+import { Link } from '@inertiajs/inertia-vue3'</script>
 
 <template>
     <header class="header transparent">
         <div class="container">
             <div class="header-inner">
-                <a href="01_Home.html" class="site-logo">
+                <a class="site-logo" href="01_Home.html">
                     <h1 class="site-logo-title">Devon</h1>
                     <h1 class="site-logo-text">model agency</h1>
                 </a>
@@ -67,9 +66,9 @@ import {Link} from '@inertiajs/inertia-vue3';
                     </nav>
                     <div class="right-sec-nav d-flex align-items-center">
                         <form class="search-wr">
-                            <input type="text" id="search" name="search">
+                            <input id="search" name="search" type="text">
                             <i class="icon ion-ios-search"></i>
-                            <input type="submit" class="submit" value="">
+                            <input class="submit" type="submit" value="">
                         </form>
                         <Link :href="route('login')" class="login d-flex align-items-center">
                             Log in <i class="icon ion-ios-person-outline"></i>
@@ -86,9 +85,9 @@ import {Link} from '@inertiajs/inertia-vue3';
                             </ul>
                         </div>
                     </div>
-                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <i aria-hidden="true" class="fa fa-times"></i>
                 </div>
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i aria-hidden="true" class="fa fa-bars"></i>
             </div>
         </div>
     </header>
