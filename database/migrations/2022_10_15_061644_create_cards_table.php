@@ -16,6 +16,7 @@ return new class () extends Migration {
             $table->id();
 
             $table->string('name');
+            $table->string('phone');
 
             $table->string('photo');
             $table->jsonb('photos')->default('[]');
@@ -34,6 +35,8 @@ return new class () extends Migration {
             $table->string('orientation');
 
             $table->jsonb('service_ids')->default('[]');
+
+            $table->integer('user_id');
 
             $table->timestamps();
         });

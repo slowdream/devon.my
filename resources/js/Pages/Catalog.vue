@@ -273,8 +273,8 @@
 </template>
 
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
-import PersonalSmall from '@/Components/PersonalHorizontal.vue'
+import AppLayout from '/resources/js/Layouts/AppLayout.vue'
+import PersonalSmall from '/resources/js/Components/PersonalHorizontal.vue'
 
 const items = defineProps(['items'])
 

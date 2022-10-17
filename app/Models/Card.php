@@ -21,4 +21,9 @@ class Card extends Model
         'figure' => FigureType::class,
         'orientation' => OrientationType::class,
     ];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

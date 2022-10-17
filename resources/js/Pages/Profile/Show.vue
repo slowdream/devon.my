@@ -105,7 +105,7 @@
                                             <a href="#"><i class="fa fa-instagram"></i></a>
                                             <a href="#"><i class="fa fa-twitter"></i></a>
                                         </p>-->
-                    <a class="btn-classic" href="#">Send Privat message</a>
+                    <a class="btn-classic" href="#">{{ card.phone }}</a>
                 </aside>
             </div>
         </div>
@@ -114,7 +114,7 @@
 </template>
 
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AppLayout from '/resources/js/Layouts/AppLayout.vue'
 import { Link } from '@inertiajs/inertia-vue3'
 
 const { card } = defineProps(['card'])

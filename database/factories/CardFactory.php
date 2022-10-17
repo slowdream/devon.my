@@ -23,6 +23,7 @@ class CardFactory extends Factory
         return [
             'name' => $this->faker->name,
             'photo' => $this->faker->imageUrl,
+            'phone' => $this->faker->phoneNumber,
             'photos' => [
                 $this->faker->imageUrl,
                 $this->faker->imageUrl,
@@ -39,6 +40,7 @@ class CardFactory extends Factory
             'figure' => $this->faker->randomElement(FigureType::asArray()),
             'orientation' => $this->faker->randomElement(OrientationType::asArray()),
             'service_ids' => $this->faker->numberBetween(1, 20),
+            'user_id' => 1,
         ];
     }
 }

@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import axios from 'axios';
+
 window._ = _;
 
 /**
@@ -6,10 +8,9 @@ window._ = _;
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
-import axios from 'axios';
+// @ts-ignore
 window.axios = axios;
-
+// @ts-ignore
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**

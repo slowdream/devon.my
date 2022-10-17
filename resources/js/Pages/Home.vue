@@ -1,5 +1,6 @@
-<script setup>
-import AppLayout from '../Layouts/AppLayout.vue'</script>
+<script lang="ts" setup>
+import AppLayout from '../Layouts/AppLayout.vue'
+import { Link } from '@inertiajs/inertia-vue3'</script>
 
 <template>
     <AppLayout>
@@ -70,7 +71,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
             <div class="row categories-wr">
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Woman</p>
                             <p class="models-count">5 models</p>
@@ -79,7 +80,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Trending</p>
                             <p class="models-count">11 models</p>
@@ -88,7 +89,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">With Video</p>
                             <p class="models-count">4 models</p>
@@ -97,7 +98,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Blue Eyes</p>
                             <p class="models-count">7 models</p>
@@ -106,7 +107,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">Blonde</p>
                             <p class="models-count">9 models</p>
@@ -115,7 +116,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 </div>
                 <div class="col-sm-6 col-lg-4 categories-item-wr">
                     <a class="category-models-item" href="07_Models_Load_More_Alternative.html"
-                       style="background-image: url('assets/img/placeholder/placeholder_400x350.jpg')">
+                       style="background-image: url('resources/assets/img/placeholder/placeholder_400x350.jpg')">
                         <footer class="categories-item-footer">
                             <p class="category">European</p>
                             <p class="models-count">14 models</p>
@@ -139,7 +140,8 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                     </div>
                 </div>
                 <div class="col-md-6 author-img-wr">
-                    <img alt="" class="author-img" src="assets/img/placeholder/placeholder_900x500.jpg">
+                    <img alt="" class="author-img"
+                         src="/resources/assets/img/placeholder/placeholder_900x500.jpg">
                 </div>
             </div>
         </div>
@@ -150,9 +152,13 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
             <article class="model-row">
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
-                        <a class="img-wr" href="05_Model_Profile.html">
-                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
-                        </a>
+                        <Link
+                            :href="route('list')"
+                        >
+                            <a class="img-wr">
+                                <img alt="" src="/resources/assets/img/placeholder/placeholder_400x350.jpg">
+                            </a>
+                        </Link>
                     </div>
                     <div class="col-xl-6">
                         <div class="row-model-info">
@@ -212,7 +218,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
                         <a class="img-wr" href="05_Model_Profile.html">
-                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
+                            <img alt="" src="/resources/assets/img/placeholder/placeholder_400x350.jpg">
                         </a>
                     </div>
                     <div class="col-xl-6">
@@ -274,7 +280,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 <div class="row">
                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-0">
                         <a class="img-wr" href="05_Model_Profile.html">
-                            <img alt="" src="assets/img/placeholder/placeholder_400x350.jpg">
+                            <img alt="" src="/resources/assets/img/placeholder/placeholder_400x350.jpg">
                         </a>
                     </div>
                     <div class="col-xl-6">
@@ -339,7 +345,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 <article class="col-md-6 col-lg-4 last-post-wr">
                     <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
-                                style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
+                                style="background-image: url('./resources/assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
                                 <p class="post-btn">View post</p>
                                 <p class="post-publish">
@@ -358,7 +364,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 <article class="col-md-6 col-lg-4 last-post-wr">
                     <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
-                                style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
+                                style="background-image: url('./resources/assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
                                 <p class="post-btn">View post</p>
                                 <p class="post-publish">
@@ -377,7 +383,7 @@ import AppLayout from '../Layouts/AppLayout.vue'</script>
                 <article class="col-md-6 col-lg-4 last-post-wr">
                     <a class="post-item no-decoration" href="13_Blog_Open_Widget.html">
                         <figure class="post-image"
-                                style="background-image: url('assets/img/placeholder/placeholder_700x600.jpg')">
+                                style="background-image: url('./resources/assets/img/placeholder/placeholder_700x600.jpg')">
                             <div class="info">
                                 <p class="post-btn">View post</p>
                                 <p class="post-publish">

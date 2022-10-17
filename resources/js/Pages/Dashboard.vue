@@ -1,10 +1,9 @@
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
-</script>
+import AuthenticatedLayout from '/resources/js/Layouts/AuthenticatedLayout.vue'
+import { Head } from '@inertiajs/inertia-vue3'</script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Dashboard"/>
 
     <AuthenticatedLayout>
         <template #header>
