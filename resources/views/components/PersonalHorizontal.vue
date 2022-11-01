@@ -68,22 +68,8 @@
     </article>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
 import { Link } from '@inertiajs/inertia-vue3'
 
-export default defineComponent({
-    name: 'PersonalHorizontal',
-    components: {
-        Link,
-    },
-    props: {
-        card: Object,
-    }
-})
-
+const card = defineProps(['card'])
 </script>
-
-<style scoped>
-
-</style>
