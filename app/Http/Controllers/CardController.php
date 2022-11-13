@@ -15,7 +15,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Catalog', ['items' => Card::query()->paginate()]);
+        return Inertia::render('catalog', ['items' => Card::query()->paginate()]);
     }
 
     /**

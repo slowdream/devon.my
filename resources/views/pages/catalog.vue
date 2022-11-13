@@ -1,5 +1,5 @@
 <script setup>
-import PersonalHorizontal from '@/views/components/PersonalHorizontal'
+import PersonalHorizontal from '@/views/components/PersonalHorizontal.vue'
 
 const items = defineProps(['items'])
 </script>
