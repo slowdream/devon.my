@@ -10,6 +10,7 @@ class CardResource extends JsonResource
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
@@ -17,8 +18,8 @@ class CardResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'photo' => $this->photo,
-            'photos' => $this->photos,
+            'phone' => $this->phone,
+            'photos' => PhotoCollectionResource::collection($this->getMedia('photos')),
             'greeting' => $this->greeting,
             'description' => $this->description,
             'birthdate' => $this->birthdate,
@@ -28,7 +29,6 @@ class CardResource extends JsonResource
             'hair' => $this->hair,
             'nationality' => $this->nationality,
             'figure' => $this->figure,
-            'orientation' => $this->orientation,
         ];
     }
 }

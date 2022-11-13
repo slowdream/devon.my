@@ -1,14 +1,15 @@
 <script setup>
 import PersonalHorizontal from '@/views/components/PersonalHorizontal.vue'
+import Pagination from '@/views/components/Pagination.vue'
 
-const items = defineProps(['items'])
+const { items } = defineProps(['items'])
 </script>
 
-<template>
+<template layout>
     <!-- Models List -->
     <div class="container-fluid sort-models-wrapper models-list columns columns-list">
         <div class="row">
-            <div class="col-lg-12 col-xl-12 models-list-inner  content-wrapper">
+            <div class="col-lg-12 col-xl-12 models-list-inner content-wrapper">
                 <div class="sort-models-header">
                     <header>
                         <div class="filters">
@@ -253,24 +254,19 @@ const items = defineProps(['items'])
                 <div class="model-row-wrap">
                     <div class="row">
                         <div
-                            v-for="card in items.items.data"
+                            v-for="card in items.data"
                             :key="card.id"
                             class="col-sm-6 col-lg-12 models-list-item"
                         >
                             <PersonalHorizontal :card="card"/>
                         </div>
                     </div>
-                    <nav class="pagination">
-                        <a class="page-numbers current" href="#">1</a>
-                        <a class="page-numbers" href="#">2</a>
-                        <a class="page-numbers" href="#">3</a>
-                        <a class="page-numbers next" href="#">»</a>
-                    </nav>
+                    <Pagination :meta="items.meta"/>
                 </div>
             </div>
-            <!--                <div class="col-lg-6 col-xl-4 map-wrapper">
-                                <div id="map" class="models-load-map"></div>
-                            </div>-->
+            <!--            <div class="col-lg-6 col-xl-4 map-wrapper">-->
+            <!--                <div id="map" class="models-load-map"></div>-->
+            <!--            </div>-->
         </div>
     </div>
     <!-- End Models List -->

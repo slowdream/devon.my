@@ -1,4 +1,5 @@
 import _ from 'lodash';
+// @ts-ignore
 import axios from 'axios';
 
 window._ = _;

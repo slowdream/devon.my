@@ -18,9 +18,6 @@ return new class () extends Migration {
             $table->string('name');
             $table->string('phone');
 
-            $table->string('photo');
-            $table->jsonb('photos')->default('[]');
-
             $table->string('greeting');
             $table->text('description');
 
@@ -32,7 +29,6 @@ return new class () extends Migration {
             $table->string('hair');
             $table->string('nationality'); // Русская и тп
             $table->string('figure');
-            $table->string('orientation');
 
             $table->jsonb('service_ids')->default('[]');
 
