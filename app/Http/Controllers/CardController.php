@@ -11,6 +11,11 @@ class CardController extends Controller
 {
     public function index(): Response
     {
-        return Inertia::render('catalog', ['items' => CardResource::collection(Card::paginate(1))]);
+        return Inertia::render('catalog', ['items' => CardResource::collection(Card::paginate(5))]);
+    }
+
+    public function show(Card $card): Response
+    {
+        return Inertia::render('Profile/Show', ['card' => CardResource::make($card)]);
     }
 }

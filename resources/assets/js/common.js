@@ -1,6 +1,5 @@
 'use strict'
 $(window).on('ready', function () {
-
     //menu toggle
     var navigation_wr = $('.navigation-wr')
     var lang_menu = $('.lang-menu')
