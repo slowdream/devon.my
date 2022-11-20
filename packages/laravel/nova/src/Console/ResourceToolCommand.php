@@ -34,7 +34,7 @@ class ResourceToolCommand extends ComponentGeneratorCommand
             return;
         }
 
-        (new Filesystem)->copyDirectory(
+        (new Filesystem())->copyDirectory(
             __DIR__.'/resource-tool-stubs',
             $this->componentPath()
         );
@@ -51,7 +51,7 @@ class ResourceToolCommand extends ComponentGeneratorCommand
         $this->replace('{{ component }}', $this->componentName(), $this->componentPath().'/src/Tool.stub');
         $this->replace('{{ title }}', $this->componentTitle(), $this->componentPath().'/src/Tool.stub');
 
-        (new Filesystem)->move(
+        (new Filesystem())->move(
             $this->componentPath().'/src/Tool.stub',
             $this->componentPath().'/src/'.$this->componentClass().'.php'
         );

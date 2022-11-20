@@ -34,7 +34,7 @@ class CardCommand extends ComponentGeneratorCommand
             return;
         }
 
-        (new Filesystem)->copyDirectory(
+        (new Filesystem())->copyDirectory(
             __DIR__.'/card-stubs',
             $this->componentPath()
         );
@@ -48,7 +48,7 @@ class CardCommand extends ComponentGeneratorCommand
         $this->replace('{{ class }}', $this->componentClass(), $this->componentPath().'/src/Card.stub');
         $this->replace('{{ component }}', $this->componentName(), $this->componentPath().'/src/Card.stub');
 
-        (new Filesystem)->move(
+        (new Filesystem())->move(
             $this->componentPath().'/src/Card.stub',
             $this->componentPath().'/src/'.$this->componentClass().'.php'
         );
