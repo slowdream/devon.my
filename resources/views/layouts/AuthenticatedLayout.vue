@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import ApplicationLogo from '/resources/js/Components/ApplicationLogo.vue'
-import Dropdown from '/resources/js/Components/Dropdown.vue'
-import DropdownLink from '/resources/js/Components/DropdownLink.vue'
-import NavLink from '/resources/js/Components/NavLink.vue'
-import ResponsiveNavLink from '/resources/js/Components/ResponsiveNavLink.vue'
+import ApplicationLogo from '@/views/components/ApplicationLogo.vue'
+import Dropdown from '@/views/components/Dropdown.vue'
+import DropdownLink from '@/views/components/DropdownLink.vue'
+import NavLink from '@/views/components/NavLink.vue'
+import ResponsiveNavLink from '@/views/components/ResponsiveNavLink.vue'
 import { Link } from '@inertiajs/inertia-vue3'
 
 const showingNavigationDropdown = ref(false)
@@ -39,8 +39,9 @@ const showingNavigationDropdown = ref(false)
                                 <Dropdown align="right" width="48">
                                     <template #trigger>
                                         <span class="inline-flex rounded-md">
-                                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
-                                                    type="button">
+                                            <button
+                                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
+                                                type="button">
                                                 {{ $page.props.auth.user.name }}
 
                                                 <svg class="ml-2 -mr-0.5 h-4 w-4" fill="currentColor"
@@ -64,8 +65,9 @@ const showingNavigationDropdown = ref(false)
 
                         <!-- Hamburger -->
                         <div class="-mr-2 flex items-center sm:hidden">
-                            <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                                    @click="showingNavigationDropdown = ! showingNavigationDropdown">
+                            <button
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                                @click="showingNavigationDropdown = ! showingNavigationDropdown">
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                         :class="{'hidden': showingNavigationDropdown, 'inline-flex': ! showingNavigationDropdown }"
