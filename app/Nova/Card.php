@@ -2,11 +2,18 @@
 
 namespace App\Nova;
 
+use App\Enums\FigureType;
+use App\Enums\HairType;
+use App\Enums\NationalityType;
+use App\Models\Service;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Outl1ne\MultiselectField\Multiselect;
 
 class Card extends Resource
 {
@@ -15,7 +22,8 @@ class Card extends Resource
     public static $title = 'name';
 
     public static $search = [
-        'id', 'name',
+        'id',
+        'name',
     ];
 
     public function fields(NovaRequest $request)
@@ -23,7 +31,7 @@ class Card extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Name')
+            Text::make('Имя', 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
@@ -36,6 +44,21 @@ class Card extends Resource
             //->rules('required', 'size:3') // validation rules for the collection of images
             // validation rules for the collection of images
             ->singleImageRules('dimensions:min_width=100'),
+
+            Text::make('Приветственная фраза', 'greeting')
+                ->rules('required', 'max:255'),
+
+            Trix::make('Текст на персональной странице', 'description'),
+
+            Multiselect::make('Услуги', 'service_ids')
+                ->options(
+                    Service::all()
+                        ->mapWithKeys(fn (Service $service) => [$service->id => $service->name])->toArray()
+                ),
+
+            Select::make('Волосы', 'hair')->options(HairType::asSelectArray()),
+            Select::make('Национальность', 'nationality')->options(NationalityType::asSelectArray()),
+            Select::make('Фигура', 'figure')->options(FigureType::asSelectArray()),
 
             BelongsTo::make('Owner', 'owner', User::class),
         ];

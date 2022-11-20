@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Enums\FigureType;
 use App\Enums\HairType;
 use App\Enums\NationalityType;
-use App\Enums\OrientationType;
 use App\Models\Card;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -33,8 +32,7 @@ class CardFactory extends Factory
             'hair' => $this->faker->randomElement(HairType::asArray()),
             'nationality' => $this->faker->randomElement(NationalityType::asArray()),
             'figure' => $this->faker->randomElement(FigureType::asArray()),
-            'orientation' => $this->faker->randomElement(OrientationType::asArray()),
-            'service_ids' => $this->faker->numberBetween(1, 20),
+            'service_ids' => [$this->faker->numberBetween(1, 20)],
             'user_id' => 1,
         ];
     }

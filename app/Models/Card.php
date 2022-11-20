@@ -21,6 +21,7 @@ class Card extends Model implements HasMedia
         'hair' => HairType::class,
         'nationality' => NationalityType::class,
         'figure' => FigureType::class,
+        'service_ids' => 'array',
     ];
 
     public function owner()

@@ -43,7 +43,7 @@ class HandleInertiaRequests extends Middleware
                 'laravel' => Application::VERSION,
             ],
             'user' => $request->user(),
-            'ziggy' => fn() => array_merge((new Ziggy())->toArray(), [
+            'ziggy' => fn () => array_merge((new Ziggy())->toArray(), [
                 'location' => $request->url(),
             ]),
         ]);
