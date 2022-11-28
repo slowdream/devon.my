@@ -251,18 +251,17 @@ const { items } = defineProps(['items'])
                         </div>
                     </form>
                 </div>
-                <div class="model-row-wrap">
-                    <div class="row">
-                        <div
-                            v-for="card in items.data"
-                            :key="card.id"
-                            class="col-sm-6 col-lg-12 models-list-item"
-                        >
-                            <PersonalHorizontal :card="card"/>
-                        </div>
+                <div class="model-row-wrap flex flex-wrap flex-start">
+                    <div
+                        v-for="card in items.data"
+                        :key="card.id"
+                        class="basis-1/4 py-5 px-5"
+                        style=""
+                    >
+                        <PersonalHorizontal :card="card"/>
                     </div>
-                    <Pagination :meta="items.meta"/>
                 </div>
+                <Pagination :meta="items.meta"/>
             </div>
             <!--            <div class="col-lg-6 col-xl-4 map-wrapper">-->
             <!--                <div id="map" class="models-load-map"></div>-->

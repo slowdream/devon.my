@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Enums\FigureType;
 use App\Enums\HairType;
 use App\Enums\NationalityType;
-use App\Models\Card;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,7 +21,7 @@ class CardFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'phone' => $this->faker->phoneNumber,
+            'phone' => '+7 (999)-624-' . $this->faker->numberBetween(1111, 9999),
             'greeting' => $this->faker->text(random_int(100, 250)),
             'description' => $this->faker->text(random_int(400, 750)),
             'birthdate' => $this->faker->dateTimeBetween('-70 years', '-18 years')->format('Y-m-d'),
@@ -30,22 +29,10 @@ class CardFactory extends Factory
             'height' => $this->faker->numberBetween(140, 220),
             'chest' => $this->faker->numberBetween(0, 7),
             'hair' => $this->faker->randomElement(HairType::asArray()),
-            'nationality' => $this->faker->randomElement(NationalityType::asArray()),
+            //            'nationality' => $this->faker->randomElement(NationalityType::asArray()),
             'figure' => $this->faker->randomElement(FigureType::asArray()),
             'service_ids' => [$this->faker->numberBetween(1, 20)],
             'user_id' => 1,
         ];
-    }
-
-    public function configure()
-    {
-        return $this->afterCreating(function (Card $item) {
-            $url = 'https://source.unsplash.com/random/1200x800/?people';
-            for ($i = 0; $i < $this->faker->numberBetween(1, 5); $i++) {
-                $item
-                    ->addMediaFromUrl($url)
-                    ->toMediaCollection('photos');
-            }
-        });
     }
 }

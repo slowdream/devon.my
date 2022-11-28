@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CardController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,13 +16,13 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/{card}', [CategoryController::class, 'show'])->name('show');
 
-Route::get('/dashboard', static function () {
+
+Route::get('/auth/dashboard', static function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('catalog', [CardController::class, 'index'])->name('list');
-Route::get('catalog/{card}', [CardController::class, 'show'])->name('show');
 
 require __DIR__.'/auth.php';

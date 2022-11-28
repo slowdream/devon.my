@@ -14,6 +14,13 @@ class CardSeeder extends Seeder
      */
     public function run()
     {
-        Card::factory(10)->create();
+        Card::factory(50)->create()->each(static function (Card $card) {
+            for ($i = 0; $i < random_int(1, 5); $i++) {
+                $card
+                    ->addMedia(__DIR__ . '/default_photo.jpg')
+                    ->preservingOriginal()
+                    ->toMediaCollection('photos');
+            }
+        });
     }
 }

@@ -4,11 +4,12 @@ namespace App\Nova;
 
 use App\Enums\FigureType;
 use App\Enums\HairType;
-use App\Enums\NationalityType;
 use App\Models\Service;
+use Dniccum\PhoneNumber\PhoneNumber;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
@@ -50,6 +51,16 @@ class Card extends Resource
 
             Trix::make('Текст на персональной странице', 'description'),
 
+            PhoneNumber::make('Номер телефона', 'phone')
+                ->placeholder('+7 (###)-###-####')
+                ->format('+7 (###)-###-####')
+                ->country('RU'),
+
+            Number::make('Вес', 'weight')->min(30)->max(200),
+            Number::make('Рост', 'height')->min(110)->max(300),
+            Number::make('Грудь', 'chest')->min(0)->max(5),
+
+
             Multiselect::make('Услуги', 'service_ids')
                 ->options(
                     Service::all()
@@ -57,10 +68,12 @@ class Card extends Resource
                 ),
 
             Select::make('Волосы', 'hair')->options(HairType::asSelectArray()),
-            Select::make('Национальность', 'nationality')->options(NationalityType::asSelectArray()),
+//            Select::make('Национальность', 'nationality')->options(NationalityType::asSelectArray()),
             Select::make('Фигура', 'figure')->options(FigureType::asSelectArray()),
 
-            BelongsTo::make('Owner', 'owner', User::class),
+            BelongsTo::make('Owner', 'owner', User::class)
+                ->withMeta(['value' => $request->user()->id])
+                ->readonly(),
         ];
     }
 }

@@ -27,7 +27,7 @@ return new class () extends Migration {
             $table->smallInteger('height');
             $table->smallInteger('chest');
             $table->string('hair');
-            $table->string('nationality'); // Русская и тп
+//            $table->string('nationality'); // Русская и тп
             $table->string('figure');
 
             $table->jsonb('service_ids')->default('[]');
