@@ -16,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/', [MainController::class, 'index'])->name('main');
 Route::get('/{card}', [CategoryController::class, 'show'])->name('show');
 
 

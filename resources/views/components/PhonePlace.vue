@@ -1,5 +1,5 @@
 <template>
-    <p class="py-5">
+    <p class="my-5 btn-classic">
         {{ hiddenPhone }}
     </p>
 </template>

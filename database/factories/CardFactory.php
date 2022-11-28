@@ -31,7 +31,7 @@ class CardFactory extends Factory
             'hair' => $this->faker->randomElement(HairType::asArray()),
             //            'nationality' => $this->faker->randomElement(NationalityType::asArray()),
             'figure' => $this->faker->randomElement(FigureType::asArray()),
-            'service_ids' => [$this->faker->numberBetween(1, 20)],
+            'service_ids' => $this->faker->randomElements(range(0, 20), $this->faker->numberBetween(5, 10)),
             'user_id' => 1,
         ];
     }

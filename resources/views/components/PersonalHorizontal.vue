@@ -1,9 +1,15 @@
 <template>
-    <article class="model-row">
+    <article class="model-row m-2">
         <div class="flex flex-col justify-between">
             <div class="">
-                <a :href="route('show', card.id)" class="img-wr">
-                    <img :src="card.photos[0].original_url" alt="">
+                <a
+                    :href="route('show', card.id)"
+                    class="img-wr"
+                >
+                    <img
+                        :src="card.photos[0].original_url"
+                        alt=""
+                    >
                 </a>
             </div>
             <div class="">
@@ -36,21 +42,19 @@
                         </p>
                     </div>
                     <!--
-                    <p class="rating">
-                        <i aria-hidden="true" class="fa fa-star active"></i>
-                        <i aria-hidden="true" class="fa fa-star active"></i>
-                        <i aria-hidden="true" class="fa fa-star active"></i>
-                        <i aria-hidden="true" class="fa fa-star active"></i>
-                        <i aria-hidden="true" class="fa fa-star active"></i>
-                    </p>
-                    -->
+                                                  <p class="rating">
+                                                      <i aria-hidden="true" class="fa fa-star active"></i>
+                                                      <i aria-hidden="true" class="fa fa-star active"></i>
+                                                      <i aria-hidden="true" class="fa fa-star active"></i>
+                                                      <i aria-hidden="true" class="fa fa-star active"></i>
+                                                      <i aria-hidden="true" class="fa fa-star active"></i>
+                                                  </p>
+                                                  -->
                 </div>
             </div>
             <div>
                 <p class="soc-icons-wr">
-                    <phone-place :phone=card.phone>
-
-                    </phone-place>
+                    <PhonePlace :phone="card.phone" />
                 </p>
             </div>
         </div>

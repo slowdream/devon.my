@@ -11,6 +11,6 @@ class CategoryController extends Controller
 {
     public function show(Card $card): Response
     {
-        return Inertia::render('Profile/Show', ['card' => CardResource::make($card)]);
+        return Inertia::render('Profile/ShowPage', ['card' => CardResource::make($card)]);
     }
 }

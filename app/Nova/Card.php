@@ -47,18 +47,23 @@ class Card extends Resource
             ->singleImageRules('dimensions:min_width=100'),
 
             Text::make('Приветственная фраза', 'greeting')
-                ->rules('required', 'max:255'),
+                ->rules('required', 'max:255')
+                ->hideFromIndex(),
 
-            Trix::make('Текст на персональной странице', 'description'),
+            Trix::make('Текст на персональной странице', 'description')
+                ->hideFromIndex(),
 
             PhoneNumber::make('Номер телефона', 'phone')
                 ->placeholder('+7 (###)-###-####')
                 ->format('+7 (###)-###-####')
                 ->country('RU'),
 
-            Number::make('Вес', 'weight')->min(30)->max(200),
-            Number::make('Рост', 'height')->min(110)->max(300),
-            Number::make('Грудь', 'chest')->min(0)->max(5),
+            Number::make('Вес', 'weight')->min(30)->max(200)
+                ->hideFromIndex(),
+            Number::make('Рост', 'height')->min(110)->max(300)
+                ->hideFromIndex(),
+            Number::make('Грудь', 'chest')->min(0)->max(5)
+                ->hideFromIndex(),
 
 
             Multiselect::make('Услуги', 'service_ids')
@@ -67,12 +72,13 @@ class Card extends Resource
                         ->mapWithKeys(fn (Service $service) => [$service->id => $service->name])->toArray()
                 ),
 
-            Select::make('Волосы', 'hair')->options(HairType::asSelectArray()),
-//            Select::make('Национальность', 'nationality')->options(NationalityType::asSelectArray()),
-            Select::make('Фигура', 'figure')->options(FigureType::asSelectArray()),
+            Select::make('Волосы', 'hair')->options(HairType::asSelectArray())
+                ->hideFromIndex(),
+            Select::make('Фигура', 'figure')->options(FigureType::asSelectArray())
+                ->hideFromIndex(),
 
             BelongsTo::make('Owner', 'owner', User::class)
-                ->withMeta(['value' => $request->user()->id])
+                ->withMeta(['value' => $this->user_id ?? $request->user()->id])
                 ->readonly(),
         ];
     }
