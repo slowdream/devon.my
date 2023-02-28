@@ -19,10 +19,10 @@
         ],
         "paths": {
             "@/*": [
-                "./resources/js/*",
+                "./resources/js/*"
             ]
         },
-        "outDir": "./public/build/assets",
+        "outDir": "./public/build/assets"
     },
     "typeRoots": [
         "./node_modules/@types",
