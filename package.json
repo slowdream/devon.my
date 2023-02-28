@@ -26,7 +26,6 @@
         "@volar/vue-typescript": "^0.40.5",
         "@vue/eslint-config-typescript": "^11.0.0",
         "autoprefixer": "^10.4.7",
-        "axios": "^1.1.2",
         "eslint": "^8.35.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",
@@ -42,7 +41,6 @@
         "eslint-plugin-unused-imports": "^2.0.0",
         "eslint-plugin-vue": "^9.9.0",
         "espree": "^9.3.3",
-        "lodash": "^4.17.21",
         "postcss": "^8.4.14",
         "prettier": "^2.8.4",
         "sass": "^1.58.3",
@@ -54,6 +52,8 @@
     },
     "dependencies": {
         "vue": "^3.2.31",
+        "axios": "^1.1.2",
+        "lodash": "^4.17.21",
         "@inertiajs/vue3": "^1.0.0",
         "laravel-vite-plugin": "^0.7.2"
     }
