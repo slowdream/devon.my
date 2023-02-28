@@ -1,12 +1,22 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        './resources/**/*.blade.php',
-        './resources/**/*.ts',
-        './resources/**/*.vue',
-        './resources/**/*.scss',
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './vendor/laravel/jetstream/**/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.vue',
     ],
+
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
-    plugins: [],
-}
+
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};

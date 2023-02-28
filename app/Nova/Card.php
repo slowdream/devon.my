@@ -6,7 +6,7 @@ use App\Enums\FigureType;
 use App\Enums\HairType;
 use App\Models\Service;
 use Dniccum\PhoneNumber\PhoneNumber;
-use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
+//use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -36,7 +36,7 @@ class Card extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Images::make('Images', 'photos') // second parameter is the media collection name
+/*            Images::make('Images', 'photos') // second parameter is the media collection name
             //->conversionOnPreview('medium-size') // conversion used to display the "original" image
             //->conversionOnDetailView('thumb') // conversion used on the model's view
             //->conversionOnIndexView('thumb') // conversion used to display the image on the model's index page
@@ -44,7 +44,7 @@ class Card extends Resource
             ->fullSize() // full size column
             //->rules('required', 'size:3') // validation rules for the collection of images
             // validation rules for the collection of images
-            ->singleImageRules('dimensions:min_width=100'),
+            ->singleImageRules('dimensions:min_width=100'),*/
 
             Text::make('Приветственная фраза', 'greeting')
                 ->rules('required', 'max:255')

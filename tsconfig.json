@@ -8,25 +8,33 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "allowJs": true,
         "lib": [
             "esnext",
             "dom"
         ],
         "types": [
-            "vite/client",
-            "jest"
+            "@types/node",
+            "@types/ziggy-js"
         ],
-        "baseUrl": ".",
         "paths": {
             "@/*": [
-                "resources/*"
+                "./resources/js/*",
             ]
-        }
+        },
+        "outDir": "./public/build/assets",
     },
+    "typeRoots": [
+        "./node_modules/@types",
+        "resources/js/types"
+    ],
     "include": [
-        "resources/**/*"
+        "resources/js/**/*.ts",
+        "resources/js/**/*.d.ts",
+        "resources/js/**/*.vue"
     ],
     "exclude": [
-        "**/*.spec.ts"
+        "node_modules",
+        "public"
     ]
 }
