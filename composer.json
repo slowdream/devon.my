@@ -20,10 +20,12 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "spatie/laravel-medialibrary": "^10.0.0",
+        "staudenmeir/eloquent-json-relations": "^1.1",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "fumeapp/modeltyper": "^2.0",
         "laravel-lang/attributes": "^2.0",
         "laravel-lang/lang": "^12.2",
         "laravel-lang/publisher": "^14.4",

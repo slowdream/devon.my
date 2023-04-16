@@ -1,26 +1,36 @@
 {
     "extends": [
         "airbnb",
+        "plugin:vue/vue3-recommended",
         "prettier"
     ],
     "plugins": [
         "prettier"
     ],
     "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "": "never",
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
         "prettier/prettier": [
             "error"
         ]
     },
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "requireConfigFile": false,
-        "babelOptions": {
-            "parserOpts": {
-                "plugins": [
-                    "jsx"
-                ]
-            }
+    "settings": {
+        "import/resolver": {
+            "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
         }
+    },
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
     }
 }

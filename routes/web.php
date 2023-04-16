@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MainController;
 use Illuminate\Foundation\Application;
@@ -17,8 +18,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [MainController::class, 'index'])->name('main');
-Route::get('/{card}', [CategoryController::class, 'show'])->name('show');
+Route::get('/', [CardController::class, 'index'])->name('home');
+Route::get('/1', [CardController::class, 'show'])->name('show');
 //Route::get('/', function () {
 //    return Inertia::render('Welcome', [
 //        'canLogin' => Route::has('login'),

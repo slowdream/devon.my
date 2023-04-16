@@ -66,11 +66,11 @@ class Card extends Resource
                 ->hideFromIndex(),
 
 
-            Multiselect::make('Услуги', 'service_ids')
-                ->options(
-                    Service::all()
-                        ->mapWithKeys(fn (Service $service) => [$service->id => $service->name])->toArray()
-                ),
+//            Multiselect::make('Услуги', 'service_ids')
+//                ->options(
+//                    Service::all()
+//                        ->mapWithKeys(fn (Service $service) => [$service->id => $service->name])->toArray()
+//                ),
 
             Select::make('Волосы', 'hair')->options(HairType::asSelectArray())
                 ->hideFromIndex(),

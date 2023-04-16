@@ -9,13 +9,8 @@ use Inertia\Response;
 
 class CardController extends Controller
 {
-    public function index(): Response
+    public function show(): Response
     {
-        return Inertia::render('catalog', ['items' => CardResource::collection(Card::paginate(5))]);
-    }
-
-    public function show(Card $card): Response
-    {
-        return Inertia::render('Profile/Show', ['card' => CardResource::make($card)]);
+        return Inertia::render('Show', ['card' => CardResource::make(Card::first())]);
     }
 }
