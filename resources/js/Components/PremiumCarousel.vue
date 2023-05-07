@@ -3,7 +3,7 @@
         <Slide v-for="slide in 10" :key="slide">
             <div class="carousel__item">
                 <span
-                    style="display: block; width: 250px; height: 350px"
+                    style="display: block; width: 164px; height: 246px"
                     class="p-3 rounded bg-red-700"
                 ></span>
             </div>

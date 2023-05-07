@@ -9,7 +9,7 @@ defineProps({ card: { type: Object as PropType<Card>, required: true } });
 </script>
 
 <template>
-    <div class="px-5">
+    <div>
         <div class="grid grid-cols-2 gap-4 justify-items-stretch">
             <div class="flex justify-between">
                 <h3>{{ card.name }}</h3>
@@ -28,11 +28,10 @@ defineProps({ card: { type: Object as PropType<Card>, required: true } });
                 <div class="grid grid-rows-2 gap-4">
                     <section class="grid grid-cols-1 gap-4">
                         <div class="bg-yellow-500">02</div>
-                        <div class="bg-gray-500">03</div>
                     </section>
                     <section class="grid grid-cols-2 gap-4">
-                        <div class="bg-yellow-500">04</div>
-                        <div class="bg-gray-500">05</div>
+                        <div class="bg-yellow-500">03</div>
+                        <div class="bg-gray-500">04</div>
                     </section>
                 </div>
             </section>
@@ -49,8 +48,10 @@ defineProps({ card: { type: Object as PropType<Card>, required: true } });
                     <span>рост</span>
                 </div>
                 <div>Categories</div>
-                <div class="flex justify-center">
-                    <PriceTable />
+                <PriceTable :price-table="card.price_table" />
+                <div class="flex">
+                    <span class="flex-none w-14">logo</span>
+                    <span class="grow ml-8">Показать телефон</span>
                 </div>
             </div>
         </section>

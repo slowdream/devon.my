@@ -36,15 +36,17 @@ return new class () extends Migration {
             $table->integer('age_limit_to')->nullable();
             $table->integer('contacts_limit')->nullable();
 
-            $table->integer('apartment_hour_1_price')->nullable();
-            $table->integer('outcall_hour_1_price')->nullable();
-            $table->integer('apartment_hour_2_price')->nullable();
-            $table->integer('outcall_hour_2_price')->nullable();
-            $table->integer('night_apartment_price')->nullable();
-            $table->integer('night_outcall_price')->nullable();
-            $table->integer('express_program_price')->nullable();
+//            $table->integer('apartment_hour_1_price')->nullable();
+//            $table->integer('outcall_hour_1_price')->nullable();
+//            $table->integer('apartment_hour_2_price')->nullable();
+//            $table->integer('outcall_hour_2_price')->nullable();
+//            $table->integer('night_apartment_price')->nullable();
+//            $table->integer('night_outcall_price')->nullable();
+//            $table->integer('express_program_price')->nullable();
 
             $table->jsonb('outcall_type')->nullable(); // Куда выезжает
+
+            $table->jsonb('price_table')->nullable();
 
             $table->text('description')->nullable();
 

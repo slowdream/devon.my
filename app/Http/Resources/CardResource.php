@@ -29,6 +29,7 @@ class CardResource extends JsonResource
             'hair' => $this->hair,
             'nationality' => $this->nationality,
             'figure' => $this->figure,
+            'price_table' => $this->price_table,
         ];
     }
 }

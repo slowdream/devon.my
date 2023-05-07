@@ -3,12 +3,12 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <main>
-        <header>
-            <Link :href="route('home')"> Home </Link>
-            <Link href="/about"> About </Link>
-        </header>
-        <article>
+    <header>
+        <Link :href="route('home')"> Home </Link>
+        <Link href="/about"> About </Link>
+    </header>
+    <main class="grid justify-items-center">
+        <article class="max-w-7xl">
             <slot />
         </article>
     </main>

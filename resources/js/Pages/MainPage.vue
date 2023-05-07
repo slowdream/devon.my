@@ -13,10 +13,6 @@ defineProps({
 </script>
 
 <template>
-    <div class="w-full">
-        <PremiumCarousel></PremiumCarousel>
-    </div>
-    <div class="w-full">
-        <ProfileCard v-for="(card, k) in collection.data" :key="k" :card="card" />
-    </div>
+    <PremiumCarousel />
+    <ProfileCard v-for="(card, k) in collection.data" :key="k" :card="card" />
 </template>

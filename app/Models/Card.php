@@ -26,6 +26,7 @@ class Card extends Model implements HasMedia
         'hair_type' => HairType::class,
         'orientation' => OrientationType::class,
         'figure_type' => FigureType::class,
+        'price_table' => 'array', // [ 0 => ['where' => 'price'] ]
         'outcall_type' => AsEnumCollection::class.':'.OutcallType::class,
         'messengers' => AsEnumCollection::class.':'.MessengerList::class,
         'services' => 'array',
