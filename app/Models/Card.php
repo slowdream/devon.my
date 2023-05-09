@@ -6,14 +6,14 @@ use App\Enums\FigureType;
 use App\Enums\HairType;
 use App\Enums\MessengerList;
 use App\Enums\OrientationType;
-use App\Enums\OutcallType;
+use App\Enums\OutCallType;
 use Illuminate\Database\Eloquent\Casts\AsEnumCollection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use \Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
+use Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
 use Staudenmeir\EloquentJsonRelations\Relations\BelongsToJson;
 
 class Card extends Model implements HasMedia
@@ -27,8 +27,8 @@ class Card extends Model implements HasMedia
         'orientation' => OrientationType::class,
         'figure_type' => FigureType::class,
         'price_table' => 'array', // [ 0 => ['where' => 'price'] ]
-        'outcall_type' => AsEnumCollection::class.':'.OutcallType::class,
-        'messengers' => AsEnumCollection::class.':'.MessengerList::class,
+        'outcall_type' => AsEnumCollection::class . ':' . OutCallType::class,
+        'messengers' => AsEnumCollection::class . ':' . MessengerList::class,
         'services' => 'array',
     ];
 

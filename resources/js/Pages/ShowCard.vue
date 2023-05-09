@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, PropType } from 'vue';
+import { PropType } from 'vue';
 import ProfileCard from '@/Components/ProfileCard.vue';
 import Card from '@/types/models/card';
 

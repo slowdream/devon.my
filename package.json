@@ -13,7 +13,6 @@
         "@babel/core": "^7.21.0",
         "@babel/eslint-parser": "^7.19.1",
         "@babel/preset-env": "^7.20.2",
-        "@protonemedia/form-components-pro-vue3-tailwind3-simple": "^2.0.14-beta1.0",
         "@rushstack/eslint-patch": "^1.1.4",
         "@tailwindcss/forms": "^0.5.2",
         "@tailwindcss/typography": "^0.5.2",
@@ -59,6 +58,7 @@
         "vue3-carousel": "^0.2.12",
         "vite": "^4.0.0",
         "unplugin-vue-components": "^0.24.0",
+        "@protonemedia/form-components-pro-vue3-tailwind3-simple": "^2.0.14-beta1.0",
         "ziggy-js": "^1.5.0"
     }
 }

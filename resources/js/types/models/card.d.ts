@@ -14,4 +14,5 @@ export default interface Card {
     user_id: number;
     created_at: Date | null;
     updated_at: Date | null;
+    price_table: [{ name: String; price: Number }];
 }

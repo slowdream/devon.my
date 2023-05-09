@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, PropType } from 'vue';
+import { PropType } from 'vue';
 
 defineProps({
     priceTable: { type: Object as PropType<[{ name: String; price: Number }]>, required: true },

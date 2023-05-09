@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, PropType } from 'vue';
+import { PropType } from 'vue';
 import Card from '@/types/models/card';
 import AddressBtn from '@/Components/Elements/AddressBtn.vue';
 import CardCheckLogo from '@/Components/Elements/CardCheckLogo.vue';

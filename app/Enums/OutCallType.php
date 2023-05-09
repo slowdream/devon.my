@@ -4,7 +4,7 @@ namespace App\Enums;
 
 use BenSampo\Enum\Enum;
 
-final class OutcallType extends Enum
+final class OutCallType extends Enum
 {
     public const APARTMENT = 'На квартиру';
     public const HOTEL = 'В гостиницу';
