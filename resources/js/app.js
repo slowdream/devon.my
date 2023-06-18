@@ -13,8 +13,12 @@ import {
     Submit,
     Textarea,
 } from '@protonemedia/form-components-pro-vue3-tailwind3-simple';
+import Slider from '@vueform/slider';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+
 import MainLayout from './Layouts/MainLayout.vue';
+
+import '@vueform/slider/themes/default.css';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -33,6 +37,7 @@ createInertiaApp({
             .component('Select', Select)
             .component('Submit', Submit)
             .component('Textarea', Textarea)
+            .component('Slider', Slider)
             .mount(el);
     },
     progress: {

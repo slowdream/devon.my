@@ -1,14 +1,16 @@
 <template>
-    <Carousel :items-to-show="6" :wrap-around="true" :transition="500" :autoplay="20 * 1000">
-        <Slide v-for="slide in 10" :key="slide">
-            <div class="carousel__item">
-                <span
-                    style="display: block; width: 164px; height: 246px"
-                    class="p-3 rounded bg-red-700"
-                ></span>
-            </div>
-        </Slide>
-    </Carousel>
+    <div class="py-4">
+        <Carousel :items-to-show="6" :wrap-around="true" :transition="500" :autoplay="20 * 1000">
+            <Slide v-for="slide in 10" :key="slide">
+                <div class="carousel__item">
+                    <span
+                        style="display: block; width: 164px; height: 246px"
+                        class="p-3 rounded bg-red-700"
+                    ></span>
+                </div>
+            </Slide>
+        </Carousel>
+    </div>
 </template>
 <script setup>
 import 'vue3-carousel/dist/carousel.css';
@@ -17,13 +19,13 @@ import 'vue3-carousel/dist/carousel.css';
 import { defineComponent } from 'vue';
 import { Carousel, Slide } from 'vue3-carousel';
 
-export default defineComponent({
-    name: 'PremiumCarousel',
-    components: {
-        Carousel,
-        Slide,
-    },
-});
+// export default defineComponent({
+//     name: 'PremiumCarousel',
+//     components: {
+//         Carousel,
+//         Slide,
+//     },
+// });
 </script>
 
 <style scoped>

@@ -11,14 +11,14 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AddressBtn: typeof import('./resources/js/Components/Elements/AddressBtn.vue')['default']
     CardCheckLogo: typeof import('./resources/js/Components/Elements/CardCheckLogo.vue')['default']
-    CardChekLogo: typeof import('./resources/js/Components/Elements/CardChekLogo.vue')['default']
     CategoryEl: typeof import('./resources/js/Components/Elements/CategoryEl.vue')['default']
     CategoryNav: typeof import('./resources/js/Components/CategoryNav.vue')['default']
     FilterAside: typeof import('./resources/js/Components/FilterAside.vue')['default']
-    MainLayout: typeof import('./resources/js/Layouts/MainLayout.vue')['default']
     PremiumCarousel: typeof import('./resources/js/Components/PremiumCarousel.vue')['default']
     PriceTable: typeof import('./resources/js/Components/Elements/PriceTable.vue')['default']
     ProfileCard: typeof import('./resources/js/Components/ProfileCard.vue')['default']
-    Welcome: typeof import('./resources/js/Pages/Welcome.vue')['default']
+    ProfileCardSmall: typeof import('./resources/js/Components/ProfileCardSmall.vue')['default']
+    StandardBtn: typeof import('./resources/js/Components/Elements/StandardBtn.vue')['default']
+    StandardPaginator: typeof import('./resources/js/Components/Elements/StandardPaginator.vue')['default']
   }
 }

@@ -1,23 +1,15 @@
-<script setup>
-import { Link } from '@inertiajs/vue3';
+<script setup lang="ts">
+import HeaderMain from '@/Layouts/HeaderMain.vue';
 </script>
 
 <template>
-    <header>
-        <Link :href="route('home')"> Home </Link>
-        <Link href="/about"> About </Link>
-    </header>
-    <main class="grid justify-items-center">
-        <article class="max-w-7xl">
+    <HeaderMain />
+    <main class="2xl container mx-auto">
+        <article>
             <slot />
         </article>
     </main>
+    <footer style="background-color: rgba(#f2274c, 0.2)"></footer>
 </template>
-
-<script>
-export default {
-    name: 'MainLayout',
-};
-</script>
 
 <style scoped></style>

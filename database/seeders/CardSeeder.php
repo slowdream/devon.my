@@ -15,7 +15,7 @@ class CardSeeder extends Seeder
     public function run()
     {
         Card::factory(50)->create()->each(static function (Card $card) {
-            for ($i = 0; $i < random_int(1, 5); $i++) {
+            for ($i = 0; $i < random_int(20, 35); $i++) {
                 $card
                     ->addMedia(__DIR__ . '/default_photo.jpg')
                     ->preservingOriginal()
