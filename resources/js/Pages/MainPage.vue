@@ -5,6 +5,7 @@ import ProfileCard from '@/Components/ProfileCard.vue';
 import PremiumCarousel from '@/Components/PremiumCarousel.vue';
 import FilterAside from '@/Components/FilterAside.vue';
 import StandardPaginator from '@/Components/Elements/StandardPaginator.vue';
+import CategoryNav from '@/Components/CategoryNav.vue';
 
 defineProps({
     collection: {
@@ -15,6 +16,7 @@ defineProps({
 </script>
 
 <template>
+    <CategoryNav />
     <PremiumCarousel />
     <div class="flex">
         <div class="w-1/4 p-8">

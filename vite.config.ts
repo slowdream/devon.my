@@ -16,13 +16,23 @@ export default defineConfig({
             input: 'resources/js/app.js',
             refresh: true,
         }),
-        vue(),
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
+        }),
         Components({
             dirs: ['resources/js/Components'],
             deep: true,
             dts: true,
             resolvers: [ElementPlusResolver()],
         }),
-        AutoImport(),
+        AutoImport({
+            dirs: ['resources/js/Components'],
+            dts: true,
+        }),
     ],
 });

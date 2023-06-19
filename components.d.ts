@@ -10,15 +10,28 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AddressBtn: typeof import('./resources/js/Components/Elements/AddressBtn.vue')['default']
+    ApplicationLogo: typeof import('./resources/js/Components/ApplicationLogo.vue')['default']
     CardCheckLogo: typeof import('./resources/js/Components/Elements/CardCheckLogo.vue')['default']
     CategoryEl: typeof import('./resources/js/Components/Elements/CategoryEl.vue')['default']
     CategoryNav: typeof import('./resources/js/Components/CategoryNav.vue')['default']
+    Checkbox: typeof import('./resources/js/Components/Checkbox.vue')['default']
+    DangerButton: typeof import('./resources/js/Components/DangerButton.vue')['default']
+    Dropdown: typeof import('./resources/js/Components/Dropdown.vue')['default']
+    DropdownLink: typeof import('./resources/js/Components/DropdownLink.vue')['default']
     FilterAside: typeof import('./resources/js/Components/FilterAside.vue')['default']
+    InputError: typeof import('./resources/js/Components/InputError.vue')['default']
+    InputLabel: typeof import('./resources/js/Components/InputLabel.vue')['default']
+    Modal: typeof import('./resources/js/Components/Modal.vue')['default']
+    NavLink: typeof import('./resources/js/Components/NavLink.vue')['default']
     PremiumCarousel: typeof import('./resources/js/Components/PremiumCarousel.vue')['default']
     PriceTable: typeof import('./resources/js/Components/Elements/PriceTable.vue')['default']
+    PrimaryButton: typeof import('./resources/js/Components/PrimaryButton.vue')['default']
     ProfileCard: typeof import('./resources/js/Components/ProfileCard.vue')['default']
     ProfileCardSmall: typeof import('./resources/js/Components/ProfileCardSmall.vue')['default']
+    ResponsiveNavLink: typeof import('./resources/js/Components/ResponsiveNavLink.vue')['default']
+    SecondaryButton: typeof import('./resources/js/Components/SecondaryButton.vue')['default']
     StandardBtn: typeof import('./resources/js/Components/Elements/StandardBtn.vue')['default']
     StandardPaginator: typeof import('./resources/js/Components/Elements/StandardPaginator.vue')['default']
+    TextInput: typeof import('./resources/js/Components/TextInput.vue')['default']
   }
 }

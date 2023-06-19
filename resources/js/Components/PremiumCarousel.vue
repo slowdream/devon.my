@@ -14,18 +14,7 @@
 </template>
 <script setup>
 import 'vue3-carousel/dist/carousel.css';
-</script>
-<script>
-import { defineComponent } from 'vue';
 import { Carousel, Slide } from 'vue3-carousel';
-
-// export default defineComponent({
-//     name: 'PremiumCarousel',
-//     components: {
-//         Carousel,
-//         Slide,
-//     },
-// });
 </script>
 
 <style scoped>
